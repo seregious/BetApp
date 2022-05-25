@@ -9,10 +9,12 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    let bet = Bet(sportType: "Футбол", tournament: "РПЛ", matchDate: "14.09", homeTeam: "ЦСКА", guestTeam: "Спартак", betType: "П1", ratio: 1.2, betAmount: 300, result: .win)
-    var bets: [Bet] {
-        [bet, bet, bet, bet, bet, bet, bet]
-    }
+    var bets: [Bet] = []
+    
+//    let bet = Bet(sportType: "Футбол", tournament: "РПЛ", matchDate: "14.09", homeTeam: "ЦСКА", guestTeam: "Спартак", betType: "П1", ratio: 1.2, betAmount: 300, result: .win)
+//    var bets: [Bet] {
+//        [bet, bet, bet, bet, bet, bet, bet]
+//    }
     
     private var collectionView: UICollectionView?
     

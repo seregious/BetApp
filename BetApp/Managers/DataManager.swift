@@ -216,11 +216,11 @@ class DataManager {
     ]
     
     var betDataBase: [Bet] = [
-        Bet(sportType: "Футбол", tournament: "РПЛ", matchDate: "29-04-22", homeTeam: "Зенит", questTeam: "Краснодар", betType: "П1", ratio: 1.9, betAmount: 5000, result: .win),
-        Bet(sportType: "Футбол", tournament: "АПЛ", matchDate: "15-04-22", homeTeam: "Лестер Сити", questTeam: "Арсенал", betType: "Х2", ratio: 1.5, betAmount: 3500, result: .lost),
-        Bet(sportType: "Баскетбол", tournament: "НБА", matchDate: "10-05-22", homeTeam: "Чикаго", questTeam: "Юта", betType: "ТБ (215)", ratio: 2.0, betAmount: 2500, result: .refund),
-        Bet(sportType: "Футбол", tournament: "АПЛ", matchDate: "24-05-22", homeTeam: "Манчестер Сити", questTeam: "Тоттенхэм", betType: "Х", ratio: 4.0, betAmount: 10000, result: .notCalculated),
-        Bet(sportType: "Хоккей", tournament: "НХЛ", matchDate: "13-03-22", homeTeam: "Торонто", questTeam: "Бостон", betType: "Ф1 (0)", ratio: 1.6, betAmount: 4000, result: .win)]
+        Bet(sportType: "Футбол", tournament: "РПЛ", matchDate: "29-04-22", homeTeam: "Зенит", guestTeam: "Краснодар", betType: "П1", ratio: 1.9, betAmount: 5000, result: .win),
+        Bet(sportType: "Футбол", tournament: "АПЛ", matchDate: "15-04-22", homeTeam: "Лестер Сити", guestTeam: "Арсенал", betType: "Х2", ratio: 1.5, betAmount: 3500, result: .lost),
+        Bet(sportType: "Баскетбол", tournament: "НБА", matchDate: "10-05-22", homeTeam: "Чикаго", guestTeam: "Юта", betType: "ТБ (215)", ratio: 2.0, betAmount: 2500, result: .refund),
+        Bet(sportType: "Футбол", tournament: "АПЛ", matchDate: "24-05-22", homeTeam: "Манчестер Сити", guestTeam: "Тоттенхэм", betType: "Х", ratio: 4.0, betAmount: 10000, result: .notCalculated),
+        Bet(sportType: "Хоккей", tournament: "НХЛ", matchDate: "13-03-22", homeTeam: "Торонто", guestTeam: "Бостон", betType: "Ф1 (0)", ratio: 1.6, betAmount: 4000, result: .win)]
     
     func placeBet(sportType: String,
                   tournament: String,
@@ -238,7 +238,7 @@ class DataManager {
                 tournament: tournament,
                 matchDate: matchDate,
                 homeTeam: homeTeam,
-                questTeam: questTeam,
+                guestTeam: questTeam,
                 betType: betType,
                 ratio: ratio,
                 betAmount: betAmount,
