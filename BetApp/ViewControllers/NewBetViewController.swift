@@ -8,7 +8,12 @@
 import UIKit
 
 class NewBetViewController: UIViewController {
+    
+    let newBetLabel = CustomLabel(text: "Новая ставка", size: 50)
+    
+    
     override func viewDidLoad() {
         view.backgroundColor = .appBlue
+        title = "Новая ставка"
     }
 }
