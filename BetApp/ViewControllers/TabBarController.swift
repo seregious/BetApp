@@ -9,10 +9,12 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    let bets = DataManager.shared.betDataBase
+   
     
     
     override func viewDidLoad() {
+        
+        let bets = DataManager.shared.betDataBase
         
         setTabBar()
         
@@ -46,6 +48,7 @@ class TabBarController: UITabBarController {
             tabBarItems(for: authorsVC, with: "Авторы", with: authorsImage)
         ]
         
+        mainVC.bets = bets
     }
     
     private func tabBarItems(for rootViewController: UIViewController, with title: String, with image: UIImage?) -> UIViewController {
