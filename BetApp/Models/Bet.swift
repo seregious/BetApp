@@ -10,14 +10,14 @@ struct Bet {
     var tournament: String
     var matchDate: String
     var homeTeam: String
-    var questTeam: String
+    var guestTeam: String
     var betType: String
     var ratio: Float
     var betAmount: Int
     var result: Result
     
     var match: String {
-        "\(matchDate): \(homeTeam) \(questTeam)"
+        "\(matchDate): \(homeTeam) - \(guestTeam)"
     }
 }
 
