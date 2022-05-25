@@ -43,7 +43,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
             arrangedSubviews: [firstStack, matchLabel, secondStack],
             axis: .vertical,
             spacing: 10)
-        //stackView.alignment = .leading
         
         self.addSubview(stackView)
         

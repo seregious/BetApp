@@ -19,7 +19,7 @@
 		A3AD03AB283BC75100A91BAE /* StatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD03AA283BC75100A91BAE /* StatViewController.swift */; };
 		A3AD03AD283BC78800A91BAE /* AuthorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD03AC283BC78800A91BAE /* AuthorsViewController.swift */; };
 		A3AD03B7283BE6CC00A91BAE /* StackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD03B2283BE6CC00A91BAE /* StackView + Extension.swift */; };
-		A3AD03B8283BE6CC00A91BAE /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD03B3283BE6CC00A91BAE /* UIImageView + Extension.swift */; };
+		A3AD03B8283BE6CC00A91BAE /* UIImageView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD03B3283BE6CC00A91BAE /* UIImageView Extension.swift */; };
 		A3AD03B9283BE6CC00A91BAE /* UILabel Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD03B4283BE6CC00A91BAE /* UILabel Extension.swift */; };
 		A3AD03BA283BE6CC00A91BAE /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD03B5283BE6CC00A91BAE /* UIButton + Extension.swift */; };
 		A3AD03BD283BEBF400A91BAE /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD03BC283BEBF400A91BAE /* CustomCollectionViewCell.swift */; };
@@ -42,7 +42,7 @@
 		A3AD03AA283BC75100A91BAE /* StatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatViewController.swift; sourceTree = "<group>"; };
 		A3AD03AC283BC78800A91BAE /* AuthorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsViewController.swift; sourceTree = "<group>"; };
 		A3AD03B2283BE6CC00A91BAE /* StackView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StackView + Extension.swift"; sourceTree = "<group>"; };
-		A3AD03B3283BE6CC00A91BAE /* UIImageView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
+		A3AD03B3283BE6CC00A91BAE /* UIImageView Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView Extension.swift"; sourceTree = "<group>"; };
 		A3AD03B4283BE6CC00A91BAE /* UILabel Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel Extension.swift"; sourceTree = "<group>"; };
 		A3AD03B5283BE6CC00A91BAE /* UIButton + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		A3AD03BC283BEBF400A91BAE /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 			children = (
 				A3AD03B2283BE6CC00A91BAE /* StackView + Extension.swift */,
 				A3AD03B5283BE6CC00A91BAE /* UIButton + Extension.swift */,
-				A3AD03B3283BE6CC00A91BAE /* UIImageView + Extension.swift */,
+				A3AD03B3283BE6CC00A91BAE /* UIImageView Extension.swift */,
 				A3AD03B4283BE6CC00A91BAE /* UILabel Extension.swift */,
 				A3AD03BE283E4B5C00A91BAE /* UIColor Extension.swift */,
 				A36510B8283E5DEC00A809D2 /* UITextField Extension.swift */,
@@ -211,7 +211,7 @@
 				A3AD03BF283E4B5C00A91BAE /* UIColor Extension.swift in Sources */,
 				A3AD0399283B789000A91BAE /* MainViewController.swift in Sources */,
 				A3AD0395283B789000A91BAE /* AppDelegate.swift in Sources */,
-				A3AD03B8283BE6CC00A91BAE /* UIImageView + Extension.swift in Sources */,
+				A3AD03B8283BE6CC00A91BAE /* UIImageView Extension.swift in Sources */,
 				A3AD03AD283BC78800A91BAE /* AuthorsViewController.swift in Sources */,
 				A33FA74F283E7F2600705E8E /* DataManager.swift in Sources */,
 				A3AD03B9283BE6CC00A91BAE /* UILabel Extension.swift in Sources */,

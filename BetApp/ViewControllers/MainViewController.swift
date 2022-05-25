@@ -11,11 +11,6 @@ class MainViewController: UIViewController {
     
     var bets: [Bet] = []
     
-//    let bet = Bet(sportType: "Футбол", tournament: "РПЛ", matchDate: "14.09", homeTeam: "ЦСКА", guestTeam: "Спартак", betType: "П1", ratio: 1.2, betAmount: 300, result: .win)
-//    var bets: [Bet] {
-//        [bet, bet, bet, bet, bet, bet, bet]
-//    }
-    
     private var collectionView: UICollectionView?
     
     override func viewDidLoad() {
@@ -23,11 +18,7 @@ class MainViewController: UIViewController {
         view.backgroundColor = .clear
         setupCollectionView()
         setupNavBar()
-        
     }
-    
-    
-    
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -58,6 +49,7 @@ extension MainViewController {
         }
         collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
         
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         collectionView.dataSource = self
         collectionView.delegate = self
         view.addSubview(collectionView)
