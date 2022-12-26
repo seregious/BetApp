@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3E0C1196283BBE0A00001F23 /* Bet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C1195283BBE0A00001F23 /* Bet.swift */; };
+		3E9902B7295979FC00A94A3C /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9902B6295979FC00A94A3C /* Resources.swift */; };
+		3E9902B929597A5200A94A3C /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9902B829597A5200A94A3C /* UIColor + Extension.swift */; };
+		3E9902BB29597CB900A94A3C /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9902BA29597CB900A94A3C /* UIView + Extension.swift */; };
 		A33FA74F283E7F2600705E8E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FA74E283E7F2600705E8E /* DataManager.swift */; };
 		A36510B9283E5DEC00A809D2 /* UITextField Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36510B8283E5DEC00A809D2 /* UITextField Extension.swift */; };
 		A3AD0395283B789000A91BAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AD0394283B789000A91BAE /* AppDelegate.swift */; };
@@ -29,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		3E0C1195283BBE0A00001F23 /* Bet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet.swift; sourceTree = "<group>"; };
+		3E9902B6295979FC00A94A3C /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		3E9902B829597A5200A94A3C /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		3E9902BA29597CB900A94A3C /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		A33FA74E283E7F2600705E8E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A36510B8283E5DEC00A809D2 /* UITextField Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField Extension.swift"; sourceTree = "<group>"; };
 		A3AD0391283B789000A91BAE /* BetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,15 +102,17 @@
 		A3AD0393283B789000A91BAE /* BetApp */ = {
 			isa = PBXGroup;
 			children = (
+				3E9902B6295979FC00A94A3C /* Resources.swift */,
 				A3AD0394283B789000A91BAE /* AppDelegate.swift */,
 				A3AD0396283B789000A91BAE /* SceneDelegate.swift */,
 				A3AD03AF283BE66200A91BAE /* Extensions */,
+				3E0C1197283BBE2300001F23 /* Models */,
 				A33FA74D283E7F2600705E8E /* Managers */,
 				A3AD03AE283BCD4D00A91BAE /* ViewControllers */,
 				A3AD039D283B789200A91BAE /* Assets.xcassets */,
 				A3AD039F283B789200A91BAE /* LaunchScreen.storyboard */,
 				A3AD03A2283B789200A91BAE /* Info.plist */,
-				3E0C1197283BBE2300001F23 /* Models */,
+				A3AD03BE283E4B5C00A91BAE /* UIColor Extension.swift */,
 			);
 			path = BetApp;
 			sourceTree = "<group>";
@@ -128,9 +136,10 @@
 				A3AD03B5283BE6CC00A91BAE /* UIButton + Extension.swift */,
 				A3AD03B3283BE6CC00A91BAE /* UIImageView + Extension.swift */,
 				A3AD03B4283BE6CC00A91BAE /* UILabel Extension.swift */,
-				A3AD03BE283E4B5C00A91BAE /* UIColor Extension.swift */,
 				A36510B8283E5DEC00A809D2 /* UITextField Extension.swift */,
 				A3AD03BC283BEBF400A91BAE /* CustomCollectionViewCell.swift */,
+				3E9902BA29597CB900A94A3C /* UIView + Extension.swift */,
+				3E9902B829597A5200A94A3C /* UIColor + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,12 +223,15 @@
 				A3AD03B8283BE6CC00A91BAE /* UIImageView + Extension.swift in Sources */,
 				A3AD03AD283BC78800A91BAE /* AuthorsViewController.swift in Sources */,
 				A33FA74F283E7F2600705E8E /* DataManager.swift in Sources */,
+				3E9902B929597A5200A94A3C /* UIColor + Extension.swift in Sources */,
+				3E9902B7295979FC00A94A3C /* Resources.swift in Sources */,
 				A3AD03B9283BE6CC00A91BAE /* UILabel Extension.swift in Sources */,
 				A3AD03C1283E521800A91BAE /* NewBetViewController.swift in Sources */,
 				A3AD03A9283BC6A000A91BAE /* TabBarController.swift in Sources */,
 				A3AD0397283B789000A91BAE /* SceneDelegate.swift in Sources */,
 				3E0C1196283BBE0A00001F23 /* Bet.swift in Sources */,
 				A3AD03AB283BC75100A91BAE /* StatViewController.swift in Sources */,
+				3E9902BB29597CB900A94A3C /* UIView + Extension.swift in Sources */,
 				A3AD03BA283BE6CC00A91BAE /* UIButton + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

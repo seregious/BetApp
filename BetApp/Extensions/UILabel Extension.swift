@@ -7,17 +7,6 @@
 
 import UIKit
 
-//extension UILabel {
-//    convenience init(text: String, font: UIFont? = .avenir20(), color: UIColor = .white) {
-//        self.init()
-//
-//        self.text = text
-//        self.font = font
-//        self.textColor = color
-//    }
-//}
-
-
 class CustomLabel: UILabel {
     
     convenience init(text: String, size: CGFloat = 20) {
@@ -38,8 +27,7 @@ class CustomLabel: UILabel {
     }
     
     private func setup() {
-        self.textColor = .white
-        //self.font = UIFont.init(name: "avenir", size: size)
+        self.textColor = Resources.Colors.mainFont
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
         self.layer.shadowRadius = 20

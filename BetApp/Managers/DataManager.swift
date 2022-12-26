@@ -215,34 +215,43 @@ class DataManager {
         "Баскетбол" : ["П1", "П2", "Ф1 (+10)","Ф2 (+10)", "Ф1 (-10)","Ф2 (-10)", "ТБ 215","ТМ 215"]
     ]
     
-    var betDataBase: [Bet] = [
-        Bet(sportType: "Футбол", tournament: "РПЛ", matchDate: "29-04-22", homeTeam: "Зенит", guestTeam: "Краснодар", betType: "П1", ratio: 1.9, betAmount: 5000, result: .win),
-        Bet(sportType: "Футбол", tournament: "АПЛ", matchDate: "15-04-22", homeTeam: "Лестер Сити", guestTeam: "Арсенал", betType: "Х2", ratio: 1.5, betAmount: 3500, result: .lost),
-        Bet(sportType: "Баскетбол", tournament: "НБА", matchDate: "10-05-22", homeTeam: "Чикаго", guestTeam: "Юта", betType: "ТБ (215)", ratio: 2.0, betAmount: 2500, result: .refund),
-        Bet(sportType: "Футбол", tournament: "АПЛ", matchDate: "24-05-22", homeTeam: "Манчестер Сити", guestTeam: "Тоттенхэм", betType: "Х", ratio: 4.0, betAmount: 10000, result: .notCalculated),
-        Bet(sportType: "Хоккей", tournament: "НХЛ", matchDate: "13-03-22", homeTeam: "Торонто", guestTeam: "Бостон", betType: "Ф1 (0)", ratio: 1.6, betAmount: 4000, result: .win)]
+    private var betDataBase: [Bet] = [
+        Bet(sportType: "Хоккей", league: "НХЛ", matchDate: "13 марта 2022 г.", homeTeam: "Торонто", guestTeam: "Бостон", betType: "Ф1 (0)", ratio: 1.6, betAmount: 4000, result: Resources.Result.win.rawValue),
+        Bet(sportType: "Футбол", league: "АПЛ", matchDate: "15 апр. 2022 г.", homeTeam: "Лестер Сити", guestTeam: "Арсенал", betType: "Х2", ratio: 1.5, betAmount: 3500, result: Resources.Result.lost.rawValue),
+        Bet(sportType: "Футбол", league: "РПЛ", matchDate: "29 апр. 2022 г.", homeTeam: "Зенит", guestTeam: "Краснодар", betType: "П1", ratio: 1.9, betAmount: 5000, result: Resources.Result.win.rawValue),
+        Bet(sportType: "Баскетбол", league: "НБА", matchDate: "10 мая 2022 г.", homeTeam: "Чикаго", guestTeam: "Юта", betType: "ТБ (215)", ratio: 2.0, betAmount: 2500, result: Resources.Result.refund.rawValue),
+        Bet(sportType: "Футбол", league: "АПЛ", matchDate: "24 мая 2022 г.", homeTeam: "Манчестер Сити", guestTeam: "Тоттенхэм", betType: "Х", ratio: 4.0, betAmount: 10000, result: Resources.Result.notCalculated.rawValue),
+        Bet(sportType: "Футбол", league: "АПЛ", matchDate: "24 мая 2022 г.", homeTeam: "Манчестер Сити", guestTeam: "Тоттенхэм", betType: "Х", ratio: 4.0, betAmount: 10000, result: Resources.Result.notCalculated.rawValue),
+        Bet(sportType: "Футбол", league: "АПЛ", matchDate: "24 мая 2022 г.", homeTeam: "Манчестер Сити", guestTeam: "Тоттенхэм", betType: "Х", ratio: 4.0, betAmount: 10000, result: Resources.Result.notCalculated.rawValue),
+        Bet(sportType: "Футбол", league: "АПЛ", matchDate: "24 мая 2022 г.", homeTeam: "Манчестер Сити", guestTeam: "Тоттенхэм", betType: "Х", ratio: 4.0, betAmount: 10000, result: Resources.Result.notCalculated.rawValue)
+    ]
     
-    func placeBet(sportType: String,
-                  tournament: String,
-                  matchDate: String,
-                  homeTeam: String,
-                  questTeam: String,
-                  betType: String,
-                  ratio: Float,
-                  betAmount: Int,
-                  result: Result) {
+    func placeBet(with bet: Bet) {
         
         betDataBase.append(
             Bet(
-                sportType: sportType,
-                tournament: tournament,
-                matchDate: matchDate,
-                homeTeam: homeTeam,
-                guestTeam: questTeam,
-                betType: betType,
-                ratio: ratio,
-                betAmount: betAmount,
-                result: result))
+                sportType: bet.sportType,
+                league: bet.league,
+                matchDate: bet.matchDate,
+                homeTeam: bet.homeTeam,
+                guestTeam: bet.guestTeam,
+                betType: bet.betType,
+                ratio: bet.ratio,
+                betAmount: bet.betAmount,
+                result: bet.result))
+    }
+    
+    func changeBet(with bet: Bet, in betIndex: Int) {
+        betDataBase[betDataBase.count - 1 - betIndex] = bet
+    }
+    
+    func getBets() -> [Bet] {
+        betDataBase.reversed()
+    }
+    
+    func deleteBet(at betIndex: Int) {
+        betDataBase.remove(at: betDataBase.count - 1 - betIndex)
+        print(betDataBase)
     }
     
     private init() {}

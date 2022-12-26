@@ -11,39 +11,50 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "CustomCollectionViewCell"
     
+    private var resultLabel = CustomLabel()
+    private var matchDate = CustomLabel()
     private var sportTypeLabel = CustomLabel()
     private var tournamentLabel = CustomLabel()
     private var matchLabel = CustomLabel()
     private var betTypeLabel = CustomLabel()
     private var ratioLabel = CustomLabel()
     private var betAmountLabel = CustomLabel()
-    private var resultLabel = CustomLabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = .black.withAlphaComponent(0.1)
+        contentView.backgroundColor = Resources.Colors.cellBackground
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = UIColor.white.cgColor
         contentView.layer.cornerRadius = 25
         
-        let firstStack = UIStackView(
+        let header = UIStackView(
+            arrangedSubviews: [resultLabel, matchDate],
+            axis: .horizontal,
+            spacing: 20
+        )
+        
+        let body = UIStackView(
             arrangedSubviews: [sportTypeLabel, tournamentLabel, betTypeLabel],
             axis: .horizontal,
             spacing: 20
         )
-        firstStack.distribution = .equalCentering
+        body.distribution = .equalCentering
         
-        let secondStack = UIStackView(
-            arrangedSubviews: [ratioLabel, betAmountLabel, resultLabel],
+        let footer = UIStackView(
+            arrangedSubviews: [betAmountLabel, ratioLabel],
             axis: .horizontal,
             spacing: 20)
-        secondStack.distribution = .equalCentering
+        footer.distribution = .equalCentering
         
         let stackView = UIStackView(
-            arrangedSubviews: [firstStack, matchLabel, secondStack],
+            arrangedSubviews: [
+                header,
+                addSeparator(with: Resources.Colors.separator, height: 1),
+                body,
+                matchLabel,
+                footer],
             axis: .vertical,
-            spacing: 10)
-        //stackView.alignment = .leading
+            spacing: 5)
         
         self.addSubview(stackView)
         
@@ -62,12 +73,35 @@ class CustomCollectionViewCell: UICollectionViewCell {
     }
     
     func getData(bet: Bet) {
+        resultLabel.text = bet.result
+        resultLabel.font = UIFont.boldSystemFont(ofSize: 19)
+        matchDate.text = bet.matchDate
+        
         sportTypeLabel.text = bet.sportType
-        tournamentLabel.text = bet.tournament
+        tournamentLabel.text = bet.league
         matchLabel.text = bet.match
         betTypeLabel.text = bet.betType
+        
         ratioLabel.text = String(bet.ratio)
+        ratioLabel.font = UIFont.boldSystemFont(ofSize: 19)
+        
         betAmountLabel.text = String(bet.betAmount)
-        resultLabel.text = bet.result.rawValue
+        betAmountLabel.font = UIFont.boldSystemFont(ofSize: 19)
+        
+        switch bet.result {
+        case Resources.Result.win.rawValue:
+            resultLabel.textColor = Resources.Colors.winFont
+            betAmountLabel.textColor = Resources.Colors.winFont
+            betAmountLabel.text = "\(bet.betAmount)  -> " + String(format: "%.0f", Float(bet.betAmount) * bet.ratio)
+        case Resources.Result.lost.rawValue:
+            resultLabel.textColor = Resources.Colors.lostFont
+            betAmountLabel.textColor = Resources.Colors.lostFont
+        case Resources.Result.refund.rawValue:
+            resultLabel.textColor = Resources.Colors.refundFont
+            betAmountLabel.textColor = Resources.Colors.refundFont
+        default:
+            resultLabel.textColor = Resources.Colors.notCalculatedFont
+            betAmountLabel.textColor = Resources.Colors.notCalculatedFont
+        }
     }
 }
