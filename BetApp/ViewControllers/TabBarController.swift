@@ -8,19 +8,16 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-    
-    
-    
-    
+
     override func viewDidLoad() {
         
-        let bets = DataManager.shared.betDataBase
+        let bets = DataManager.shared.getBets()
         
         setTabBar()
         
         let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithDefaultBackground()
-        tabBarAppearance.backgroundColor = .appRed
+        tabBarAppearance.backgroundColor = Resources.Colors.tabBar
         UITabBar.appearance().standardAppearance = tabBarAppearance
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         
@@ -31,7 +28,7 @@ class TabBarController: UITabBarController {
         let authorsImage = UIImage(systemName: "person.2", withConfiguration: boldConfig)
         
         tabBar.tintColor = .white
-        view.backgroundColor = .appBlue
+        view.backgroundColor = Resources.Colors.appBackground
         
         
         let mainVC = MainViewController()

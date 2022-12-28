@@ -27,8 +27,7 @@ class CustomLabel: UILabel {
     }
     
     private func setup() {
-        self.textColor = .white
-        //self.font = UIFont.init(name: "avenir", size: size)
+        self.textColor = Resources.Colors.mainFont
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
         self.layer.shadowRadius = 20
